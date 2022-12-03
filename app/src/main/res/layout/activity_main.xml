@@ -24,6 +24,7 @@
         android:fontFamily="@font/pretendard_bold"
         android:text="한번 떠난 편지는\n돌아오지 않습니다"
         android:textSize="24sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBar" />
 
@@ -35,6 +36,8 @@
         android:layout_marginTop="20dp"
         android:text="새 편지 쓰기"
         app:icon="@drawable/ic_plus_24"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/pretendard_bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title" />
 
@@ -45,7 +48,8 @@
         app:layout_constraintTop_toBottomOf="@id/addNewLetterBtn"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp">
+        android:layout_marginTop="32dp"
+        t>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
