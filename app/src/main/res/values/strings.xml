@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Sojuton</string>
+    <string name="letter_count">%d명 이어씀</string>
+    <string name="heart_count">이 소주편지는 현재 %d도</string>
 </resources>
