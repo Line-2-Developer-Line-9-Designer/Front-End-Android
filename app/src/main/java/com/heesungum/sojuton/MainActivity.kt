@@ -13,18 +13,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val dummyList: MutableList<RollingPaperEntity> = mutableListOf()
+        binding.rollingPaperRv.adapter = RollingPaperRecyclerAdapter(getDummyList(), ::onItemClick)
 
-        for (i in 0..9) {
-            dummyList.add(
-                RollingPaperEntity(
-                    "${i}번째 제목",
-                    "${i}번째 내용",
-                )
-            )
-        }
-
-        binding.rollingPaperRv.adapter = RollingPaperRecyclerAdapter(dummyList, ::onItemClick)
     }
 
     private fun onItemClick() {
@@ -33,4 +23,35 @@ class MainActivity : AppCompatActivity() {
         )
         startActivity(intent)
     }
+
+    private fun getDummyList(): List<RollingPaperEntity> = listOf(
+        RollingPaperEntity(
+            title = "오늘 소주톤 다들 어떠셨나요?",
+            author = "9호선 디자이너",
+            heartCount = 15,
+            date = "22.11.30",
+            letterCount = 12
+        ),
+        RollingPaperEntity(
+            title = "초기 스타트업 이야기",
+            author = "9호선 디자이너",
+            heartCount = 8,
+            date = "22.11.30",
+            letterCount = 12
+        ),
+        RollingPaperEntity(
+            title = "나만의 최고 소주톤 프로젝트",
+            author = "9호선 디자이너",
+            heartCount = 20,
+            date = "22.11.30",
+            letterCount = 12
+        ),
+        RollingPaperEntity(
+            title = "강남역으로 출근하시는 분들!",
+            author = "9호선 디자이너",
+            heartCount = 32,
+            date = "22.11.30",
+            letterCount = 12
+        ),
+    )
 }

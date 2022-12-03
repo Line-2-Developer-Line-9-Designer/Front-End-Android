@@ -19,7 +19,7 @@ class PaperDetailActivity : AppCompatActivity() {
         binding.recyclerView.adapter = PaperDetailAdapter(getDummyList())
     }
 
-    fun getDummyList(): List<DetailEntity> = listOf(
+    private fun getDummyList(): List<DetailEntity> = listOf(
         DetailEntity(
             title = "초기 스타트업 이야기",
             author = "9호선 디자이너",
