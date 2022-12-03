@@ -15,6 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.rollingPaperRv.adapter = RollingPaperRecyclerAdapter(getDummyList(), ::onItemClick)
 
+        binding.profileButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, MyPageActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun onItemClick() {
