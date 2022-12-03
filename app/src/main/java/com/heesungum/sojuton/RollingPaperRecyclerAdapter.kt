@@ -38,6 +38,10 @@ class RollingPaperRecyclerAdapter(
 
         fun onBind(entity: RollingPaperEntity) {
             binding.title.text = entity.title
+            binding.date.text = entity.date
+            binding.author.text = entity.author
+            binding.heart.text = "${entity.heartCount}도"
+            binding.count.text = "${entity.letterCount}명 이어씀"
 
             @ColorInt
             val cardColor = when (adapterPosition % 4) {
