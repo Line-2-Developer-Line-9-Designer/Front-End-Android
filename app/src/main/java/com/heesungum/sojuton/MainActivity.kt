@@ -1,5 +1,6 @@
 package com.heesungum.sojuton
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.heesungum.sojuton.databinding.ActivityMainBinding
@@ -23,6 +24,13 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-        binding.rollingPaperRv.adapter = RollingPaperRecyclerAdapter(dummyList)
+        binding.rollingPaperRv.adapter = RollingPaperRecyclerAdapter(dummyList, ::onItemClick)
+    }
+
+    private fun onItemClick() {
+        val intent = Intent(
+            this, PaperDetailActivity::class.java
+        )
+        startActivity(intent)
     }
 }
