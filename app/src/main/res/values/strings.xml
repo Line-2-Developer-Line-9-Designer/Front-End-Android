@@ -2,4 +2,5 @@
     <string name="app_name">Sojuton</string>
     <string name="letter_count">%d명 이어씀</string>
     <string name="heart_count">이 소주편지는 현재 %d도</string>
+    <string name="register"><u>아직 계정이 없으신가요?</u></string>
 </resources>
