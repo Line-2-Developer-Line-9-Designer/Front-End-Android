@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:paddingVertical="8dp">
+    android:layout_height="136dp"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="4dp">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginVertical="8dp"
-        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,24 +24,71 @@
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="제목~~~~" />
+                tools:text="오늘 소주톤 다들 어떠셨나요?" />
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/author"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:layout_constraintStart_toStartOf="@id/title"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title"
-                tools:text="내용~~~~" />
+                tools:text="9호선 디자이너" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/pretendard_regular"
+                android:gravity="center"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/author"
+                app:layout_constraintStart_toEndOf="@id/author"
+                app:layout_constraintTop_toTopOf="@id/author"
+                tools:text="22.12.03" />
+
+            <TextView
+                android:id="@+id/heart"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                tools:text="15도"
+                app:layout_constraintStart_toEndOf="@id/date"
+                app:layout_constraintTop_toTopOf="@id/date"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/pretendard_bold"
+                app:layout_constraintBottom_toBottomOf="@id/date"
+                app:drawableStartCompat="@drawable/ic_heart_20" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/author"
+                tools:text="12명 이어씀" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </com.google.android.material.card.MaterialCardView>
 
 
