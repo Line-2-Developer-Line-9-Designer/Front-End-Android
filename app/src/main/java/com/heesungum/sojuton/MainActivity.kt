@@ -1,11 +1,28 @@
 package com.heesungum.sojuton
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.heesungum.sojuton.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val dummyList: MutableList<RollingPaperEntity> = mutableListOf()
+
+        for (i in 0..9) {
+            dummyList.add(
+                RollingPaperEntity(
+                    "${i}번째 제목",
+                    "${i}번째 내용",
+                )
+            )
+        }
+
+        binding.rollingPaperRv.adapter = RollingPaperRecyclerAdapter(dummyList)
     }
 }
